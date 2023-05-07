@@ -43,4 +43,9 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="send_button_name">Отправить</string>
+    <string name="edit_text_hint">Введите сообщение</string>
+    <string name="empty_message_error">Введите текст во все поля для ввода!</string>
+    <string name="length_message_error">Ваше сообщение и ник слишком длинные</string>
+    <string name="edit_text_nickname">Введите никнейм</string>
 </resources>
