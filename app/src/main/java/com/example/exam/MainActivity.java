@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference myRefNick = database.getReference("nickname");
 
     private static final short MAX_MESSAGE_LENGTH = 255;
-    private static final short MAX_NICKNAME_LENGTH = 15;
+    private static final short MAX_NICKNAME_LENGTH = 255;
     EditText mEditTextMessage, mEditNickname;
     TextView mTimeTextView;
     Button mSendButton;
@@ -60,7 +60,12 @@ public class MainActivity extends AppCompatActivity {
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                fetchTime();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        fetchTime();
+                    }
+                });
             }
         }, 0, 1000);
 
@@ -74,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String msg = mEditTextMessage.getText().toString();
                 String nick = mEditNickname.getText().toString();
+                String time = mTimeTextView.getText().toString();
+                nick = nick + " " + time;
                 if (msg.equals("") || nick.equals("")) {
                     Toast.makeText(MainActivity.this,R.string.empty_message_error, Toast.LENGTH_SHORT).show();
                     return;
