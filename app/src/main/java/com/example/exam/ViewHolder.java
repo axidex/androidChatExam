@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.w3c.dom.Text;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
-
     TextView message;
     TextView nickname;
 

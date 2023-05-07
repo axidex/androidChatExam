@@ -48,4 +48,5 @@
     <string name="empty_message_error">Введите текст во все поля для ввода!</string>
     <string name="length_message_error">Ваше сообщение и ник слишком длинные</string>
     <string name="edit_text_nickname">Введите никнейм</string>
+    <string name="database_error">Database error</string>
 </resources>

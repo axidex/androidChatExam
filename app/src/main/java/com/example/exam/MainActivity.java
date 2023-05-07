@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 // Получаем новое сообщение и добавляем его в список сообщений
                 String msg = snapshot.getValue(String.class);
                 messages.add(msg);
+                dataAdapter.notifyDataSetChanged();
             }
 
             @Override
